@@ -41,6 +41,7 @@ if __name__ == "__main__":
 	parser.add_argument("--system", action='store_true', default=False, help="system emulation mode")
 	parser.add_argument("--user", action='store_true', default=False, help="user space emulation mode")
 	parser.add_argument("-m", "--memory", action='store', default=None, type=int, help="memory size")
+	parser.add_argument("-M", "--machine", action="store", default=None, type=str, help="specify machine type")
 	args = parser.parse_args()
 	semu = Semu(args)
 	semu.run()
